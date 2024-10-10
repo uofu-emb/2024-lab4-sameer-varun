@@ -111,7 +111,8 @@ void test_out_of_order(void)
 
 void runner_thread (__unused void *args)
 {
-    for (;;) {
+    //Execute the test three times to ensure the user does not miss it while attempting to connect via the serial monitor
+    for (int i =0; i<=3; i++) {
         printf("Starting test run.\n");
         UNITY_BEGIN();
         RUN_TEST(test_noop);
