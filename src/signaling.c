@@ -9,7 +9,7 @@ void signal_handle_calculation(SemaphoreHandle_t request,
 {
     xSemaphoreTake(request, portMAX_DELAY);
     printf("Adding 5 to the input\n");
-    (*data).output = (*data).input + 5;
+    data->output = data->input + 5;
     vTaskDelay(10);
     xSemaphoreGive(response);
 }
