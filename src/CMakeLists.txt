@@ -2,6 +2,7 @@
 add_executable(hello_freertos
     signaling.c
     hello_freertos.c
+    fifo.c
     )
 
 pico_set_program_name(hello_freertos "test")
